@@ -17,7 +17,7 @@ const db = new pg.Client({
 db.connect();
 
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static("public"));
 
 let users = [];
 let currentUserId = 1;
